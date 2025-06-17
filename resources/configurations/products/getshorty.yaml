@@ -9,7 +9,7 @@ spec:
         - key: commitMessage
           operator: In
           values:
-            - '*promotion*'
+            - '*'
   promotionTemplate:
     versionSource:
       file: app-service.yaml
