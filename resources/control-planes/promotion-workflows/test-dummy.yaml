@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: smoke-tests
+  annotations:
+    version: 0.0.4
+    codefresh.io/workflow-origin: promotion
+    description: Dummy smoke test that always passes for apps
+spec:
+  serviceAccountName: cf-default-promotion-workflows-sa
+  entrypoint: smoke-tests
+  templates:
+    - name: smoke-tests
+      container:
+        image: alpine
+        command: [sh, -c]
+        args: ["echo 'Smoke test placeholder — Tests Passed.'"]
