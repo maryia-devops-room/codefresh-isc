@@ -10,4 +10,12 @@ spec:
           operator: In
           values:
             - '*promotion*'
+  promotionTemplate:
+    versionSource:
+      file: app-service.yaml
+      jsonPath: $.*.*.*.nodePort
+    promotion:
+      app-deploy.yaml:
+        jsonPaths:
+          - $.*.replicas
   concurrency: queue
