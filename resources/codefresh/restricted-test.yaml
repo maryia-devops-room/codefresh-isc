@@ -12,8 +12,8 @@ spec:
       exclude: ''
       recurse: true
   destinations:
-  - server: 'https://kubernetes.default.svc'
-    name: 'in-cluster'
+  - server: '*'
+    name: '*'
     namespace: '*'
   clusterResourceWhitelist:
   - group: ''
