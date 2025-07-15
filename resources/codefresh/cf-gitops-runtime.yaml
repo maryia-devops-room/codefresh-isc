@@ -14,7 +14,7 @@ spec:
     helm:
       releaseName: cf-gitops-runtime
   destination:
-    namespace: codefresh
+    namespace: codefresh-gitops
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
