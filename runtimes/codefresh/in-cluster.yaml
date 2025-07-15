@@ -9,7 +9,7 @@ metadata:
   name: in-cluster
 spec:
   destination:
-    namespace: codefresh
+    namespace: codefresh-gitops
     server: https://kubernetes.default.svc
   project: default
   source:
