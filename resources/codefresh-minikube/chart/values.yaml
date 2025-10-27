@@ -16,3 +16,25 @@ gitops-runtime:
           key: token
     runtime:
       name: codefresh-minikube
+  argo-cd:
+    configs: 
+      # url: http://localhost:8080
+      cm: 
+        url: http://localhost:8080
+        dex.config: |
+          connectors:
+          - type: ldap
+            id: ldap 
+            name: OpenLDAP
+            config:
+              host: "192.168.1.60:389" 
+              insecureNoSSL: true
+              bindDN: "cn=admin,dc=myorg,dc=local"
+              bindPW: "admin"
+              userSearch:
+                baseDN: "dc=myorg,dc=local"
+                filter: "(objectClass=inetOrgPerson)"
+                username: uid
+                idAttr: uid
+                emailAttr: mail
+                nameAttr: cn
