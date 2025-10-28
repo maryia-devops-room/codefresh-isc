@@ -49,15 +49,15 @@ gitops-runtime:
             - http://localhost:8085/auth/callback
             name: Argo CD CLI
             public: true
-         - id: argo-cd-pkce
-           redirectURIs: 
-           - http://localhost:8085/auth/callback
-           name: Argo CD PKCE
-           public: true
-         logger:
-          level: info
-          format: json
-         connectors:
+          - id: argo-cd-pkce
+            redirectURIs: 
+            - http://localhost:8085/auth/callback
+            name: Argo CD PKCE
+            public: true
+          logger:
+            level: info
+            format: json
+          connectors:
           - type: ldap
             id: ldap 
             name: OpenLDAP
