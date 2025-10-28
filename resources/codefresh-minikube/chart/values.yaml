@@ -25,7 +25,7 @@ gitops-runtime:
           name: ldap
           issuer: http://localhost:8080/api/dex
           clientID: argo-cd
-          clientSecret: 4Gcl1Wqv1UDdEgqiqBGzJg7MasF_gp24xHcQD6bO
+          clientSecret: 4Gcl1Wqv1UDdEgqiqBGzJg7MasF_gp24xHcQD6bOa
           requestedScopes:
           - openid
           - profile
@@ -40,7 +40,7 @@ gitops-runtime:
             - http://localhost:8080/api/dex/callback
             - http://localhost:8080/auth/callback
             name: Argo CD
-            secret: 4Gcl1Wqv1UDdEgqiqBGzJg7MasF_gp24xHcQD6bO
+            secret: 4Gcl1Wqv1UDdEgqiqBGzJg7MasF_gp24xHcQD6bOa
             trustedPeers:
             - argo-cd-cli
             - argo-cd-pkce
