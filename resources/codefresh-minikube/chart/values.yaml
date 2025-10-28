@@ -22,6 +22,13 @@ gitops-runtime:
       cm: 
         url: http://localhost:8080
         dex.config: |
+          issuer: http://localhost:8080/api/dex
+          staticClients:
+          - id: argo-cd
+            redirectURIs:
+            - http://localhost:8080/api/dex/callback
+            - http://localhost:8080/auth/callback
+            name: Argo CD
           connectors:
           - type: ldap
             id: ldap 
