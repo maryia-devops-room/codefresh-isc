@@ -21,6 +21,17 @@ gitops-runtime:
       # url: http://localhost:8080
       cm: 
         url: http://localhost:8080
+          oidc.config: |
+            name: ldap
+            issuer: http://localhost:8080/api/dex
+            clientID: argo-cd
+            clientSecret: 4Gcl1Wqv1UDdEgqiqBGzJg7MasF_gp24xHcQD6bO
+            requestedScopes:
+            - openid
+            - profile
+            - email
+            - groups
+    insecureSkipVerify: true
         dex.config: |
           issuer: http://localhost:8080/api/dex
           staticClients:
@@ -49,3 +60,4 @@ gitops-runtime:
                 idAttr: uid
                 emailAttr: mail
                 nameAttr: cn
+            
