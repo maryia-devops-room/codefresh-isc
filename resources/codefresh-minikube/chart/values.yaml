@@ -29,6 +29,10 @@ gitops-runtime:
             - http://localhost:8080/api/dex/callback
             - http://localhost:8080/auth/callback
             name: Argo CD
+            secret: 4Gcl1Wqv1UDdEgqiqBGzJg7MasF_gp24xHcQD6bO
+            trustedPeers:
+            - argo-cd-cli
+            - argo-cd-pkce
           connectors:
           - type: ldap
             id: ldap 
