@@ -27,7 +27,7 @@ gitops-runtime:
             id: ldap 
             name: OpenLDAP
             config:
-              host: "192.168.1.60:389" 
+              host: "172.23.82.72:389" 
               insecureNoSSL: true
               bindDN: "cn=admin,dc=myorg,dc=local"
               bindPW: "admin"
