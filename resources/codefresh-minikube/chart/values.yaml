@@ -31,7 +31,7 @@ gitops-runtime:
           - profile
           - email
           - groups
-    insecureSkipVerify: true
+          insecureSkipVerify: true
         dex.config: |
           issuer: http://localhost:8080/api/dex
           staticClients:
